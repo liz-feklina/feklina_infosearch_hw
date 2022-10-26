@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if req %}
+    <br/><h3>{{ req }}</h3>
+    <br/>top-50:<br/><br/><br/>
+        {% for res in result %}
+            <div>
+                <b>{{ res[0] |safe }}</b><br/>
+                {{ res[1] |safe }}<br/><br/><br/>
+            </div>
+        {% endfor %}
+{% endif %}
+
+{% endblock %}
